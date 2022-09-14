@@ -32,7 +32,7 @@ class AuthTest {
     }
 
     @Test
-    @DisplayName("If login with blocked registered user")
+    @DisplayName("Error message if logged in with a blocked registered user")
     void getErrorIfBlockedUser() {
         var blockedUser = getRegisteredUser("blocked");
         $("[data-test-id='login'] input").setValue(blockedUser.getLogin());
